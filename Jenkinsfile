@@ -24,7 +24,7 @@ pipeline {
 }
 
 Tuple3 VersionStrToTuple3(String version) {
-    return new Tuple3(version.split('.').collect {it.toInteger()}*)
+    return new Tuple3(version.split('.').collect {it.toInteger()})
 }
 
 Tuple3 NextMajorVersion(Tuple3 version) {
