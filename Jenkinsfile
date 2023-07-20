@@ -4,7 +4,10 @@ pipeline {
     stages {
         stage('init') {
             steps {
-                sh "echo hello"
+                script {
+                    String[] tags = sh(script: "git tags | tr - \~ | sort -V | tr \~ -")
+                    sh "echo ${tags.join(',')}"
+                }
             }
         }
     }
