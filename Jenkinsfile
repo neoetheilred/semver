@@ -1,3 +1,5 @@
+import groovy.lang.Tuple
+
 pipeline {
     agent any
 
