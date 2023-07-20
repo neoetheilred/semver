@@ -25,10 +25,10 @@ pipeline {
     }
 }
 
-Tuple3 VersionStrToTuple3(String version) {
-    return new Tuple3(version.split('.').collect {it.toInteger()})
+Tuple VersionStrToTuple3(String version) {
+    return new Tuple(version.split('.').collect {it.toInteger()})
 }
 
-Tuple3 NextMajorVersion(Tuple3 version) {
-    return new Tuple3(version.v1+1, 0, 0)
+Tuple NextMajorVersion(Tuple version) {
+    return new Tuple(version.v1+1, 0, 0)
 }
