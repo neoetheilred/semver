@@ -5,7 +5,7 @@ pipeline {
         stage('init') {
             steps {
                 script {
-                    String[] tags = sh(script: "git tags", returnStdout: true).split()
+                    String[] tags = sh(script: "git tag", returnStdout: true).split()
                     sh "echo ${tags.join(',')}"
                 }
             }
