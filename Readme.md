@@ -1,3 +1,3 @@
 ## Semantic versioning
 
-current version: `0.2.0`
+current version: `1.0.0-alpha`
